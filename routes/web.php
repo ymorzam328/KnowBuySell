@@ -30,6 +30,18 @@ Route::get('/exportes', function(){
     return view ('exportes');
 }); 
 
+Route::get('/ventas', function(){
+    return view ('ventas');
+}); 
+
+Route::get('/usuarios', function(){
+    return view ('usuarios');
+}); 
+
+Route::get('/perfil', function(){
+    return view ('perfil');
+}); 
+
 Route::get('/', function () {
     return view('welcome');
 });

@@ -1,10 +1,27 @@
-<nav class="navbar navbar-expand-lg bg-secondary ">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <!-- Librerias JS -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    
+    <!-- Estilos Bootstrap -->
+    <link href="{{ asset('css/app.css') }}" rel="styleheet">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg bg-dark" id="sidebarMenu">
     <div class="container-fluid">
-      <a class="navbar-link"  href="{{ url('/')}}">Inicio</a>
+      <a class="nav-link"  href="{{ url('/')}}">Inicio</a>
       {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> --}}
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" >
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ url('/compras')}}">Compras</a>
@@ -15,7 +32,16 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/exportes')}}">Exportes</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/ventas')}}">Ventas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/usuarios')}}">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/perfil')}}">Información del usuario</a>
+          </li>
+          {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
@@ -28,7 +54,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
-          </li>
+          </li> --}}
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -57,10 +83,11 @@
       </div>
     </div>
   </nav>
-
+</body>
+</html>
 {{-- _____________________________________ --}}
 
-  <div class="container-fluid">
+  {{-- <div class="container-fluid">
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
         <div class="position-sticky pt-3">
@@ -93,7 +120,7 @@
         </div>
 
         </nav>
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> --}}
         <!-- Contenido del contenedor de información -->
         <!-- <div class="d-flex justify-content-between flex-wrap p-3 mb-3"> -->
             <!-- <h1>Información adicional</h1>
@@ -102,9 +129,9 @@
 
         <!-- Contenido del bloque yield -->
         <!-- <div class="container"> -->
-            <br>
-            @yield('content')
+            {{-- <br>
+            @yield('content') --}}
         <!-- </div> -->
-    </main>
+    {{-- </main>
     </div>
-</div>
+</div> --}}
