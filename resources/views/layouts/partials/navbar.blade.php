@@ -1,16 +1,19 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-secondary ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-link"  href="{{ url('/')}}">Inicio</a>
+      {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> --}}
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="{{ url('/compras')}}">Compras</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{{ url('/departamentos')}}">Departamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/exportes')}}">Exportes</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,3 +57,54 @@
       </div>
     </div>
   </nav>
+
+{{-- _____________________________________ --}}
+
+  <div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+        <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+            <li class="nav-item p-3">
+        <a class="nav-link" href="{{ url('/')}}">Inicio</a>
+            </li>
+        <li class="nav-item p-3">
+           <a class="nav-link" href="{{ url('/compras')}}">Compras</a>  
+        </li>
+        <li class="nav-item p-3">
+           <a class="nav-link" href="{{ url('/departamentos')}}">Departamentos</a>    
+        </li>
+        <li class="nav-item p-3">
+           <a class="nav-link" href="{{ url('/exportes')}}">Exportes</a> 
+        </li>
+        <li class="nav-item p-3">
+           <a class="nav-link" href="{{ url('/ventas')}}">Ventas</a> 
+        </li>
+        <li class="nav-item p-3">
+           <a class="nav-link" href="{{ url('/usuarios')}}">Usuarios</a> 
+        </li>
+        <li class="nav-item p-3">
+           <a class="nav-link" href="{{ url('/perfil')}}">Información del usuario</a> 
+        </li>
+        <li class="nav-item p-3">
+           <a class="nav-link" href="#">Cerrar sesión</a> 
+        </li>
+        </ul>
+        </div>
+
+        </nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- Contenido del contenedor de información -->
+        <!-- <div class="d-flex justify-content-between flex-wrap p-3 mb-3"> -->
+            <!-- <h1>Información adicional</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla enim in luctus eleifend. Curabitur consequat rutrum nunc vitae blandit. Donec auctor varius felis, et ullamcorper lacus tincidunt in.</p> -->
+        <!-- </div> -->
+
+        <!-- Contenido del bloque yield -->
+        <!-- <div class="container"> -->
+            <br>
+            @yield('content')
+        <!-- </div> -->
+    </main>
+    </div>
+</div>

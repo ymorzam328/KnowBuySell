@@ -9,13 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bienvenido a la página princial</h1>
-    <h3>Hola selecciona una de las opciones: Login ó Register</h3>
+    <h1>PÁGINA KNOWBUYSELL</h1>
+    {{-- <h1>Bienvenido a la página princial</h1>
+    <h3>Hola selecciona una de las opciones: Login ó Register</h3> --}}
     <div class="container">
         <div class="col-md-9 justify-content">
-            Esta es la base de su aplicación, 
-            debajo se colocará todo el contenido dinámico.
-            @yield('contenido')
+            {{-- Esta es la base de su aplicación, 
+            debajo se colocará todo el contenido dinámico. --}}
+            @yield('content')
         </div>
     </div>
 

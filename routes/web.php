@@ -17,6 +17,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/compras', function(){
+    return view ('compras');
+}); 
+
+Route::get('/departamentos', function(){
+    return view ('departamentos');
+}); 
+
+Route::get('/exportes', function(){
+    return view ('exportes');
+}); 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,3 +46,4 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::get('/home', [HomeController::class,'index']);
 
 Route::get('/logout', [LogoutController::class,'logout']);
+
