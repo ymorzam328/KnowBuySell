@@ -5,6 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +61,11 @@ Route::get('/home', [HomeController::class,'index']);
 
 Route::get('/logout', [LogoutController::class,'logout']);
 
+Route::get('/verificar-conexion', function () {
+    try {
+        DB::connection()->getPdo();
+        return "Conexión exitosa";
+    } catch (\Exception $e) {
+        return "Error al conectar a la base de datos: " . $e->getMessage();
+    }
+});
