@@ -1,12 +1,8 @@
-{{-- Para hereder el formato hemos incluído @extends y @section para incluir el contenido --}}
+@extends('layouts.base')
 
-@extends('layouts.base') 
 @section('content')
-    <div>
-        Aquí podrás ver las COMPRAS
-        Mostrar la lista de compras :)
-
-        <table class="table table-light">
+   <h1>Listado de compras realizadas</h1>
+   <table class="table table-light">
             <thead class="thead-light">
                 <tr>
                     <th>#</th>
@@ -30,14 +26,14 @@
                     <td> 
                         {{-- Utilizamos la clase compra, enviamos los datos a $compra y la instrucción que 
                             utilizamos es edit --}}
-                        <a href="{{ url ('/compra/'.$compra->id.'/edit/')}}">Editar</a> 
+                        <!-- <a href="{{ url ('/compra/'.$compra->id.'/edit/')}}">Editar</a> 
                         
                         
 
                         <form action="{{ url('/compra/'.$compra->id)}}" method="post">
                         @csrf 
                         {{ method_field('DELETE')}}
-                        <input type="submit" onclick="return confirm('¿Quieres borrar?')" value="Borrar">
+                        <input type="submit" onclick="return confirm('¿Quieres borrar?')" value="Borrar"> -->
                         </form>
                     </td>
                     
@@ -46,7 +42,5 @@
             </tbody>
 
         </table>
-    <a href="{{ route('compra.pdf') }}" class= "btn btn-primary btn-sm" data-placement="left" >  PDF </a>
-    </div>
-    <a href="{{ url('/home') }}">Ir a Home</a>
+
 @endsection

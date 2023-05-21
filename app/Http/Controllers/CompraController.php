@@ -6,6 +6,9 @@ use App\Models\Compra;
 use Illuminate\Http\Request;
 use App\Http\Controllers\VentaController;
 use Illuminate\Support\Facades\DB;
+use Dompdf\Dompdf;
+use Illuminate\Support\Facades\App;
+use Barryvdh\DomPDF\Facade as PDF;
 
 
 class CompraController extends Controller
@@ -19,6 +22,25 @@ class CompraController extends Controller
         return view('compra.index', $datos);//le damos al controlador la información de la vista
         //
     }
+
+    /**
+     * To generate PDF, we use the next function:
+     */
+    public function pdf()
+    {
+        $compras = Compra::all();
+
+        $dompdf = new Dompdf();
+        $html = view('compra.pdf', compact('compras'))->render();
+
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+
+        return $dompdf->stream('compras.pdf');
+    }
+    
+
 
     /**
      * Show the form for creating a new resource.

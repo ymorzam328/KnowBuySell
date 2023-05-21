@@ -28,7 +28,7 @@ use App\Http\Controllers\CookieController;
 // });
 
 // Route::get('compra/create', [CompraController::class, 'create']);//para acceder al método create del controlador 
-
+Route::get('/compra/pdf', [App\Http\Controllers\CompraController::class, 'pdf'])-> name ('compra.pdf');
 Route::resource('compra', CompraController::class);//para acceder a todos los métodos del controlador Y sustituye 
 //a las dos rutas anteriores.
 
