@@ -13,4 +13,15 @@ class HomeController extends Controller
         //Pero lo vamos a hacer en otro sitio.Desde nuestra vista home(index)
         return view('home.index');
     }
+
+//     public function index()
+// {
+//     $cookiesAceptadas = request()->cookie('cookies_aceptadas');
+
+//     return view('welcome', compact('cookiesAceptadas'));
+// }
+
+
+    
 }
+

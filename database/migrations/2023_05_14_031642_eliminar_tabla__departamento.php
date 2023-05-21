@@ -9,26 +9,18 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-
+  
      public function up()
-{
-    Schema::dropIfExists('departamentos');
-}
-
-    // public function up(): void
-    // {
-    //     Schema::table('departamentos', function (Blueprint $table) {
-            
-    //         //
-    //     });
-    // }
-
+     {
+         Schema::dropIfExists('Departamentos');
+     }
+     
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('departamentos', function (Blueprint $table) {
+        Schema::table('Departamento', function (Blueprint $table) {
             //
         });
     }

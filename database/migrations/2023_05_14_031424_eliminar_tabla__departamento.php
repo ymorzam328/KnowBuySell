@@ -11,21 +11,23 @@ return new class extends Migration
      */
     // public function up(): void
     // {
-    //     Schema::table('compras', function (Blueprint $table) {
+    //     Schema::table('Departamento', function (Blueprint $table) {
     //         //
     //     });
     // }
 
     public function up()
-    {
-        Schema::dropIfExists('compras');
-    }
+{
+    Schema::dropIfExists('Departamentos');
+}
+
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('compras', function (Blueprint $table) {
+        Schema::table('Departamento', function (Blueprint $table) {
             //
         });
     }

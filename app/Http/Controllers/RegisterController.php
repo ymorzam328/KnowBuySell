@@ -23,4 +23,11 @@ class RegisterController extends Controller
         $user=User::create($request->validated());//esto manda llamar a nuestras reglas. Valida que se apliquen las reglas
         return redirect('/login')->with('success', 'Account created successfully' );//para poder enviar un mensaje utilizamos el método with
     }
+
+    public function showUsuarios()
+{
+    $users = User::all(); // Obtener todos los usuarios desde la base de datos
+    return view('usuarios', compact('users')); // Pasar los usuarios a la vista usuarios.blade.php
+}
+
 }

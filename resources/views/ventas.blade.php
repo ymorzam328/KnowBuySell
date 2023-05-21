@@ -8,7 +8,7 @@
     <li>Ventas 2</li>
     <li>Ventas 3</li>
     </ul>
-    <a href="{{ url('/welcome') }}">Ir a Welcome</a>
+    <a href="{{ url('/home') }}">Ir a Home</a>
 </div>
 
 @endsection

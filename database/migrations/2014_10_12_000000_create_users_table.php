@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name')->nullable();//para que no sea obligatorio el valor
             $table->string('email')->unique();
             $table->string('username')->unique();
+            $table->string('departamento_id');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

@@ -1,6 +1,28 @@
 @extends('layouts.base')
 @section('content')
-    <div>
+
+<div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($users as $user)
+        <tr>
+            <td>{{ $user->id }}</td>
+            <td>{{ $user->email }}</td>
+            <td>{{ $user->username }}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+</div>
+
+    <!-- <div>
         Aquí podrás ver los USUARIOS
         <h1>Usuarios del sistema</h1>
         <table class="table table-dark table-striped table-sm">
@@ -77,5 +99,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    <a href="{{ url('/home') }}">Ir a Home</a>
 @endsection

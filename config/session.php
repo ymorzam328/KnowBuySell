@@ -195,7 +195,9 @@ return [
     | Supported: "lax", "strict", "none", null
     |
     */
-
+    
+    // para permitir cookies de terceros o en 'strict' para permitir solo cookies del mismo sitio.
     'same_site' => 'lax',
+    
 
 ];
