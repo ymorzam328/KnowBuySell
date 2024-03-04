@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('content')
-
+@role('admin')
 <div>
 <table>
     <thead>
@@ -100,5 +100,6 @@
             </div>
         </div>
     </div> -->
+@endrole
     <a href="{{ url('/home') }}">Ir a Home</a>
 @endsection

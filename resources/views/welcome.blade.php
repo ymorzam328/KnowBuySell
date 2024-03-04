@@ -8,6 +8,11 @@
     <a href="{{ url('/login') }}">Login</a>
     <br>
     <a href="{{ url('/register') }}">Register</a>
+    <br>
+    <br>
+    <br>
+    <p> ZONA DE INSERCIÓN DE CONTENIDO PÚBLICO Y ACCESO SIN REGISTRO</p>
+    
 
     @php
         $cookiesAceptadas = request()->cookie('cookies_accepted');

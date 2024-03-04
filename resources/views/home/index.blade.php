@@ -11,6 +11,10 @@
             <a href="/logout">Logout</a>
         </p>
     @endauth
+    
+    @role('admin')
+    <p>CONTENIDO ADMINISTRADOR</p>
+    @endrole
 
     @guest
         <p>Para ver el contenido <a href="/login">inicia sesión</a> </p>

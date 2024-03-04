@@ -11,13 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ventas', function (Blueprint $table) {
+        Schema::create('compras', function (Blueprint $table) {
             $table->id();
+            // $table->timestamps();
             $table->integer('cantidad');
             $table->double('precio', 8, 2);
             $table->integer('user_id');
             $table->timestamps();
-        });
+            //para más de 250 caracteres utilizamos text()php 
+            $table->text('descripcionproducto');
+            $table->string('categoria');
+         });
     }
 
     /**
@@ -25,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ventas');
+        Schema::dropIfExists('compras');
     }
 };

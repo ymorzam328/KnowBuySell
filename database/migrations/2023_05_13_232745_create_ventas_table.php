@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('cantidad');
             $table->double('precio', 8, 2);
             $table->integer('user_id');
+            $table->string('categoria');
             $table->timestamps();
         });
     }
