@@ -8,6 +8,7 @@ use App\Http\Controllers\CompraController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\CookieController;
+use App\Http\Controllers\ChartController;
 
 
 
@@ -27,6 +28,9 @@ use App\Http\Controllers\CookieController;
 //     return view ('compra.index');
 // });
 
+// Route::get('/home', [ChartController::class, 'graficas']);
+
+Route::get('/graficas', [ChartController::class, 'index'])->middleware('auth');
 // Route::get('compra/create', [CompraController::class, 'create']);//para acceder al método create del controlador 
 Route::get('/compra/pdf', [App\Http\Controllers\CompraController::class, 'pdf'])-> name ('compra.pdf');
 Route::resource('compra', CompraController::class);//para acceder a todos los métodos del controlador Y sustituye 
@@ -57,6 +61,7 @@ Route::get('/exportes', function(){
 Route::get('/ventas', function(){
     return view ('ventas');
 }); 
+
 
 // Route::get('/usuarios', function(){
 //     return view ('usuarios');
