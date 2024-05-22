@@ -15,7 +15,9 @@
 <br>
 <br>
 <label for="user_id">User_id</label>
-<input type="number" name="user_id" value="{{$compra->user_id}}" id="user_id">
+{{-- Ponemos el campo en oculto para que el usuario no se vea en el formulario y modificamos el usuario para que 
+    se guarde de forma automática y coja el usuario logado--}}
+<input type="hidden" name="user_id" value="{{$compra->user_id}}" id="user_id">
 <br>
 <br>
 <label for="Categoria">Categoria</label>
@@ -28,6 +30,7 @@
 <input type="submit" value="Guardar datos">
 <br><br>
 
+@endsection
 <!-- <h1>Formulario</h1>
 <br>
 <br>
@@ -57,6 +60,6 @@
 <input type="submit" value="Guardar datos">
 <br><br> -->
 
-@endsection
+
 
 {{-- <a href="{{ url('/home') }}">Ir a Home</a> --}}

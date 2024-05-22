@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aplicación de Login</title>
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}">
+    <style>
+        body{
+            background-image: url(foto5.png); 
+        }
+    </style>
 </head>
 <body>
     @include('layouts.partials.navbar')

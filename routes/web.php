@@ -40,7 +40,8 @@ Route::get('/compras', function(){
 //     return view ('compra.edit');
 // }); 
 Route::get('/aceptar-cookies', [CookieController::class, 'aceptarCookies'])->name('aceptar.cookies');
-
+// Route::get('/set-cookie', [CookieController::class, 'setCookie']);
+// Route::get('/get-cookie', [CookieController::class, 'getCookie']);
 
 Route::get('/compra/{id}/edit', 'CompraController@edit')->name('compra.edit');
 
