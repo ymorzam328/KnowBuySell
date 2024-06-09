@@ -2,6 +2,24 @@
 @extends('layouts.app-master')
 
 @section('content')
+
+<style>
+.bienvenida{
+
+    /* position: relative; */
+    width: 1000px;
+    height: 1000px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: absolute;
+    top: 35%;
+    left: 35%;
+
+}
+</style>
+
+    <div class="bienvenida">
     <h1 class="container">Home</h1>
 
     @auth
@@ -12,11 +30,12 @@
             <a href="/logout">Logout</a>
         </p>
     @endauth
-    
+   
+
     @role('admin')
     <p>CONTENIDO ADMINISTRADOR</p>
     @endrole
-
+</div>
     @guest
         <p>Para ver el contenido <a href="/login">inicia sesión</a> </p>
     @endguest

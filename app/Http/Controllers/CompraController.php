@@ -65,10 +65,14 @@ class CompraController extends Controller
         Compra::insert($datosCompra);//insertamos los datos en la base de datos con este código
         // return response()->json($datosCompra);
         $id = DB::getPdo()->lastInsertId();
-
+        // añadimos sessión flash para que avise de que ha guardado los datos de compras
+        session()->flash('success', 'Datos guardados correctamente.');
     return redirect()->route('compra.edit', $id)->with('success', 'Compra creada correctamente');
         //
     }
+
+
+
 
 //     public function store(Request $request)
 // {

@@ -1,4 +1,3 @@
-
 Formulario de creación de compras
 {{-- enctyper: permite fotos y archivos --}}
 <form action="{{ url ('/compra')}}" method="post" enctype="multipart/form-data">

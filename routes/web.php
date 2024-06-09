@@ -29,8 +29,15 @@ use App\Http\Controllers\ChartController;
 // });
 
 // Route::get('/home', [ChartController::class, 'graficas']);
+// web.php
 
-Route::get('/graficas', [ChartController::class, 'index'])->middleware('auth');
+
+
+
+
+Route::get('/graficas', [ChartController::class, 'index']);
+
+// Route::get('/graficas', [ChartController::class, 'index'])->middleware('auth');
 // Route::get('compra/create', [CompraController::class, 'create']);//para acceder al método create del controlador 
 Route::get('/compra/pdf', [App\Http\Controllers\CompraController::class, 'pdf'])-> name ('compra.pdf');
 Route::resource('compra', CompraController::class);//para acceder a todos los métodos del controlador Y sustituye 

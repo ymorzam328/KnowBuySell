@@ -2,7 +2,26 @@
 @extends('layouts.base') 
 
 @section('content')
+
+<style>
+.contenedor{
+
+    /* position: relative; */
+    width: 1000px;
+    height: 1000px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: absolute;
+    top: 20%;
+    left: 20%;
+
+}
+
+</style>
+<div class="contenedor">
     <h1>Bienvenido a la página principal</h1>
+    <br>
     <h3>Hola, selecciona una de las opciones: Login ó Register</h3>
     <br>
     <a href="{{ url('/login') }}">Login</a>
@@ -12,7 +31,7 @@
     <br>
     <br>
     <p> ZONA DE INSERCIÓN DE CONTENIDO PÚBLICO Y ACCESO SIN REGISTRO</p>
-    
+</div>  
 
     @php
         $cookiesAceptadas = request()->cookie('cookies_accepted');
