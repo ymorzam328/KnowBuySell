@@ -24,16 +24,6 @@ use App\Http\Controllers\ChartController;
 |
 */
 
-// Route::get('/compra', function(){
-//     return view ('compra.index');
-// });
-
-// Route::get('/home', [ChartController::class, 'graficas']);
-// web.php
-
-
-
-
 
 Route::get('/graficas', [ChartController::class, 'index']);
 
